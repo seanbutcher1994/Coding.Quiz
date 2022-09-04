@@ -1,7 +1,9 @@
+// Global Variables:
 
 
 // Landing Page:
     // When the start game button is clicked:
+
         // Hide the landing page
         // Show the question section
         // Start the timer on question page

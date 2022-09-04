@@ -7,6 +7,10 @@ const spanTimer = document.getElementById('span-timer');
 
 
 
+let timerId;
+
+
+
 
 
 // Landing Page:
@@ -24,8 +28,21 @@ function showQuestionSection(){
     // Show the question section
     sectionQuiz.classList.remove('hide');
 
+    startTimer();
+
 }
-        // Start the timer on question page
+
+// Start the timer on question page
+function startTimer(){
+
+    // deduct time remaing by 1 every second
+    timerId = setInterval(function(){
+     const timeRemaining = Number(spanTimer.textContent) - 1;
+     spanTimer.textContent = timeRemaining;
+
+    }, 1000);
+
+}
 
 // Question Page:
     // Timer should have already started

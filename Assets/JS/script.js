@@ -1,11 +1,30 @@
 // Global Variables:
+const btnStartGame = document.getElementById('button-start-game');
+const sectionLanding = document.getElementById('section-landing');
+const sectionQuiz = document.getElementById('section-quiz');
+const spanTimer = document.getElementById('span-timer');
+
+
+
+
 
 
 // Landing Page:
     // When the start game button is clicked:
+btnStartGame.addEventListener('click', function(event){
 
-        // Hide the landing page
-        // Show the question section
+    showQuestionSection();
+
+});
+
+
+function showQuestionSection(){
+    // Hide the landing page
+    sectionLanding.classList.add('hide');
+    // Show the question section
+    sectionQuiz.classList.remove('hide');
+
+}
         // Start the timer on question page
 
 // Question Page:

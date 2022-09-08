@@ -26,19 +26,19 @@
 <!-- Question page with: -->
 <section id="section-quiz" class="hide">
     <!-- timer -->
-    <div>Timer: <span id="span-timer">5</span>(s)</div>
+    <div>Timer: <span id="span-timer"></span>(s)</div>
 
     <article>
         <!-- question title -->
-     <h2 id="question-title">Question Placeholder?</h2>
+     <h2 id="question-title"></h2>
         <!-- question choices -->
      <ul>
-        <li class="question-choices"><button class="button-choice">correct</button></li>
-        <li class="question-choices"><button class="button-choice">half correct</button></li>
-        <li class="question-choices"><button class="button-choice">incorrect</button></li>
+        <li><button id="question-choices-one" class="button-choice"></button></li>
+        <li><button id="question-choices-two" class="button-choice"></button></li>
+        <li><button id="question-choices-three" class="button-choice"></button></li>
      </ul>
         <!-- feedback -->
-     <div class="question-feedback">
+     <div id="question-feedback" class="hide">
         Well done!
      </div>
     </article>
@@ -49,7 +49,7 @@
 <!-- end game page with: -->
 <section id="section-end-game" class="hide">
     <!-- score obtained-->
- <h2 id="score">10</h2>
+ <h2 id="score"></h2>
     <!-- initial input -->
     <div>
         <label for="">Initials:</label>
@@ -81,7 +81,7 @@
 
 </section>
 
-
+<!-- <script src="./Assets/JS/questions.js"></script> -->
 <script src="./Assets/JS/script.js"></script>
 </body>
 </html>

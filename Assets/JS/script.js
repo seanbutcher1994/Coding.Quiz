@@ -12,6 +12,9 @@ const questionChoiceThree = document.getElementById('question-choices-three');
 const submitBtn = document.getElementById('submit-button');
 const questionChoiceBtns = [...document.querySelectorAll('.button-choice')];
 console.log(questionChoiceBtns)
+const finalScore = document.getElementById('score');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+finalScore.innerText = mostRecentScore;
 const feedback = document.getElementById('question-feedback');
 const questions = [
     {
@@ -135,6 +138,7 @@ function answerQuestion (event){
     } else {
             // end game
         endGame()
+        localStorage.setItem('mostRecentScore', spanTimer.value);
     }
     showQuestion(questionIndex);
 

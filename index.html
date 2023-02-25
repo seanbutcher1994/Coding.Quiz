@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="./Assets/CSS/style.css">
     <title>Document</title>
 </head>
 <body>
     
+    <section class="nes-container m">
+        <section class="message-list">
+          <section class="message -left">
+            <i class="nes-bcrikko"></i>
+            <!-- Balloon -->
+            <div class="nes-balloon from-left">
+              <p>High Scores</p>
+            </div>
+          </section>
+      
+          <section class="message -right">
+            <!-- Balloon -->
+            <div class="nes-balloon from-right">
+              <ul class="nes-list is-disc">
+                <li></li>
+              </ul>
+            </div>
+            <i class="nes-bcrikko"></i>
+          </section>
+        </section>
+      </section>
 
 <!-- landing page with: -->
-<section id="section-landing">
+<section id="section-landing" class="nes-container is-centered">
     <!-- Title -->
     <h1>Coding Quiz</h1>
     <!-- start game button -->
-    <button id="button-start-game">Start Quiz</button>
+    <button id="button-start-game" class="nes-btn is-success">Start Quiz</button>
 
 </section>
 
@@ -24,7 +47,7 @@
 
 
 <!-- Question page with: -->
-<section id="section-quiz" class="hide">
+<section id="section-quiz" class="hide nes-container is-centered">
     <!-- timer -->
     <div>Timer: <span id="span-timer"></span>(s)</div>
 
@@ -33,9 +56,9 @@
      <h2 id="question-title"></h2>
         <!-- question choices -->
      <ul>
-        <li><button id="question-choices-one" class="button-choice"></button></li>
-        <li><button id="question-choices-two" class="button-choice"></button></li>
-        <li><button id="question-choices-three" class="button-choice"></button></li>
+        <li><button id="question-choices-one" class="button-choice nes-btn is-primary"></button></li>
+        <li><button id="question-choices-two" class="button-choice nes-btn is-primary"></button></li>
+        <li><button id="question-choices-three" class="button-choice nes-btn is-primary"></button></li>
      </ul>
         <!-- feedback -->
      <div id="question-feedback" class="hide">
@@ -47,15 +70,15 @@
 </section>
 
 <!-- end game page with: -->
-<section id="section-end-game" class="hide">
+<section id="section-end-game" class="hide nes-container is-centered">
     <!-- score obtained-->
- <h2 id="score"></h2>
+ <h2 id="high-score"></h2>
     <!-- initial input -->
     <div>
-        <label for="">Initials:</label>
-        <input type="text" id="input-initials">
+        <label for="textarea_field" id="intials">Initials:</label>
+        <input type="text" id="input-initials" class="nes-textarea textbox">
         <!-- submit button -->
-        <button id="submit-button">Submit</button>
+        <button id="submit-button" class="nes-btn is-primary">Submit</button>
 
     </div>
 

@@ -12,9 +12,13 @@ const questionChoiceThree = document.getElementById('question-choices-three');
 const submitBtn = document.getElementById('submit-button');
 const questionChoiceBtns = [...document.querySelectorAll('.button-choice')];
 console.log(questionChoiceBtns)
-const finalScore = document.getElementById('score');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-finalScore.innerText = mostRecentScore;
+const finalScore = document.getElementById('high-score');
+//const mostRecentScore = localStorage.setItem('mostRecentScore');
+//finalScore.textContent = mostRecentScore;
+const initials = document.getElementById('initials');
+
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+console.log(highScores);
 const feedback = document.getElementById('question-feedback');
 const questions = [
     {
@@ -97,7 +101,10 @@ function endGame(){
     stopTimer();
     // Show the save initials and save score functions
     sectionQuiz.classList.add('hide');
-    
+
+    //localStorage.getItem('mostRecentScore', score);
+
+    finalScore.textContent = timeRemaining;    
 
 }
 // Question Page:
@@ -138,7 +145,7 @@ function answerQuestion (event){
     } else {
             // end game
         endGame()
-        localStorage.setItem('mostRecentScore', spanTimer.value);
+        console.log();
     }
     showQuestion(questionIndex);
 
@@ -159,10 +166,14 @@ function showHighScoreSection(){
 
 
 // End Game Section:
-submitBtn.addEventListener('click', function(event){
+submitBtn.addEventListener('submit', function(event){
 
     showHighScoreSection()
 
+});
+
+initials.addEventListener('keyup', function(event){
+    console.log(initials.value);
 });
 
     // If the user clicks on submit button without entering anything

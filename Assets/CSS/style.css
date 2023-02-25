@@ -3,3 +3,13 @@
 .hide {
     display: none;
 }
+
+.textbox {
+    width: 75px;
+    height: 50px;
+}
+
+.m {
+    margin-bottom: 50px;
+    margin-top: 50px
+}
